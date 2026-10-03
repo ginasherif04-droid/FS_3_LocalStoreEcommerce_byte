@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maison Market</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <span class="brand-mark">M</span>
+
+            <div>
+                <h1>Maison Market</h1>
+                <p>Curated everyday pieces</p>
+            </div>
+        </div>
+
+        <button class="cart-button" onclick="toggleCart()">
+            Cart
+            <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    THE EVERYDAY EDIT
+                </p>
+
+                <h2>
+                    Simple things,<br>
+                    beautifully chosen.
+                </h2>
+
+                <p class="hero-text">
+                    Discover carefully selected pieces made for everyday life.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section class="store-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        OUR COLLECTION
+                    </p>
+
+                    <h2>
+                        Shop the collection
+                    </h2>
+
+                </div>
+
+                <p id="product-count"></p>
+
+            </div>
+
+
+            <div
+                id="products-container"
+                class="products-grid">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CART SIDEBAR -->
+    <aside
+        id="cart-sidebar"
+        class="cart-sidebar">
+
+        <div class="cart-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    YOUR BAG
+                </p>
+
+                <h2>
+                    Shopping Cart
+                </h2>
+
+            </div>
+
+            <button
+                class="close-button"
+                onclick="toggleCart()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="cart-items"
+            class="cart-items">
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cart-total">
+                    EGP 0
+                </strong>
+
+            </div>
+
+
+            <button class="checkout-button">
+                Proceed to checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CART OVERLAY -->
+    <div
+        id="cart-overlay"
+        class="cart-overlay"
+        onclick="toggleCart()">
+    </div>
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div
+        id="product-modal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-button"
+                onclick="closeProductModal()">
+
+                ×
+
+            </button>
+
+
+            <img
+                id="modal-image"
+                src=""
+                alt="Product">
+
+
+            <div class="modal-info">
+
+                <p class="eyebrow">
+                    PRODUCT DETAILS
+                </p>
+
+                <h2 id="modal-name"></h2>
+
+                <p id="modal-description"></p>
+
+                <strong id="modal-price"></strong>
+
+                <p id="modal-stock"></p>
+
+
+                <button
+                    id="modal-add-button"
+                    class="add-button">
+
+                    Add to cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST MESSAGE -->
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
